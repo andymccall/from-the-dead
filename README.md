@@ -1,71 +1,34 @@
-# Amstrad CPC Development Environment Setup
+##From the Dead
 
-From the Dead for the Amstrad CPC. A 2D side scrolling 2D survival game where the player has to escape from an zombie apocalypse.
+![From the Dead](https://github.com/andymccall/from-the-dead/blob/assets/from_the_dead.jpg?raw=true)
 
-### Install VSCode
+In a world ravaged by an undead apocalypse, humanity teeters on the brink of extinction, a hardened survivor named Tyler must escort a young girl named Alexia across the treacherous landscape. Their journey is fraught with danger, as they face not only the infected - grotesque, mutated undead driven by an insatiable hunger - but also desperate survivors willing to do anything to stay alive.
 
-Install VSCode and the following extensions:
+With limited resources and a constant threat lurking around every corner, Tyler and Alexia must rely on their wits, survival skills, and each other to navigate this unforgiving world. Along the way, they'll encounter a cast of memorable characters, some helpful, others hostile, each with their own motivations and agendas.
 
-- ASM Code Lens : https://marketplace.visualstudio.com/items?itemName=maziac.asm-code-lens
-- DeZog : https://marketplace.visualstudio.com/items?itemName=maziac.dezog
-- Z80 Instruction Set : https://marketplace.visualstudio.com/items?itemName=maziac.z80-instruction-set
-- Z80 Assembly : https://marketplace.visualstudio.com/items?itemName=Imanolea.z80-asm
-- Makefile Tools : https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools
+As they forge a bond amidst the chaos, Tyler and Alexia's journey becomes a testament to the resilience of the human spirit and the enduring power of hope in even the darkest of times.
 
+Gameplay:
 
-### Install sjasmplus
+- **Side-scrolling 8-bit action**: Navigate pixelated landscapes, battling infected and hostile survivors in intense combat encounters.
+- **Familiar arsenal**: Utilize weapons and tools inspired by The Last of Us, including firearms, melee weapons, and crafting materials.
+- **Diverse enemy types**: Face a variety of infected, each with unique abilities and weaknesses, requiring strategic approaches.
+- **Resource management**: Scavenge for supplies and carefully manage your inventory to survive in this harsh world.
+- **Engaging narrative**: Experience a rich and emotionally impactful story, filled with twists and turns, as you uncover the secrets of this post-apocalyptic world.
 
-```
-username@host:~$ git clone --recursive -j8 https://github.com/z00m128/sjasmplus.git
-username@host:~$ cd sjasmplus
-username@host:~$ make
-username@host:~$ make install PREFIX=~/development/tools/sjasmplus
-```
+Key features:
 
-Test:
+- **Retro aesthetic**: Immerse yourself in a nostalgic 8-bit visual style, reminiscent of classic gaming experiences.
+- **Atmospheric soundtrack**: A haunting soundtrack complements the bleakness and tension of the post-apocalyptic setting.
+- **Challenging gameplay**: Test your skills and strategic thinking against relentless enemies and environmental hazards.
+- **Emotional depth**: Experience a powerful story about survival, loss, and hope in the face of overwhelming adversity.
 
-```
-username@host:~$ ./sjasmplus --version
-SjASMPlus Z80 Cross-Assembler v1.20.3 (https://github.com/z00m128/sjasmplus)
-```
+From the Dead offers a unique blend of retro charm, thrilling action, and a gripping narrative, delivering an unforgettable journey through a world on the edge of oblivion.
 
-### Install z88dk
+From the Dead will be available for the following platforms:
 
-```
-username@host:~$ sudo apt install libgmp-dev libxml2-dev
-username@host:~$ git clone --recurse-submodules --remote-submodules https://github.com/z88dk/z88dk.git
-username@host:~$ cd z88dk
-username@host:~$ ./build.sh
-username@host:~$ make install PREFIX=~/development/tools/z88dk
-```
-
-Add the z88dk to the path:
-
-```
-username@host:~$ vi ~/.profile
-```
-
-Add the following at the bottom of the file:
-
-```
-# set PATH so it includes z88dk if it exists
-if [ -d "$HOME/development/tools/z88dk/bin" ] ; then
-   PATH="$HOME/development/tools/z88dk/bin:$PATH"
-fi
-
-# set ZCCCFG if the directory exists
-if [ -d "$HOME/development/tools/z88dk/share/z88dk/lib/config" ] ; then
-   ZCCCFG=${HOME}/develoment/tools/z88dk/share/z88dk/lib/config
-fi
-```
-
-Test:
-
-```
-username@host:~$ source ~/.profile
-username@host:~$ zcc
-zcc - Frontend for the z88dk Cross-C Compiler - v22742-3f05c420f1-20240625
-
-Usage: zcc +[target] {options} {files}
-...
-```
+- Agon Light 2
+- Amstrad CPC
+- Neo6502
+- ZX Spectrum Next
+- Commander X16

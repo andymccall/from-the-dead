@@ -1,0 +1,7 @@
+SCREENMODE_160x200x16_60HZ:     equ 0
+SCREENMODE_320x200x4_60HZ:      equ 1
+SCREENMODE_640x200x2_60HZ:      equ 2
+
+	MACRO clearScreen
+	    ld a, 12
+	ENDM
